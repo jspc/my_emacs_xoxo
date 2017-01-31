@@ -1,6 +1,23 @@
 my_emacs_xoxo
 ==
 
+Building
+--
+
+```bash
+$ docker build -t jspc/emacs-xoxo .
+$ docker push jspc/emacs-xoxo
+```
+
+Running
+--
+
+```bash
+$ docker run --hostname=emacs -ti\
+              -v ${SOME_SRC_DIRECTORY}:/home/emacs/src:rw jspc/emacs-xoxo
+```
+
+
 | who       | what |
 |-----------|------|
 | dockerhub | https://hub.docker.com/r/jspc/my_emacs_xoxo/   |
@@ -32,4 +49,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
